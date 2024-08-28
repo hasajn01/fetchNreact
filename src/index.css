@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul {
+  list-style-type: none; /* Убирает точки у всех списков на странице */
+  padding: 0; /* Убирает отступы по умолчанию */
+  margin: 0; /* Убирает внешние отступы по умолчанию */
+}
+
+h1 {
+  text-align: center;
+}

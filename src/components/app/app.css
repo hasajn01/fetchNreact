@@ -1,0 +1,34 @@
+.button-block {
+    width: 852px;
+    height: 50px;
+    margin: 38px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    width: 168px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    border-radius: 224px;
+    cursor: pointer;
+}
+
+
+.line {
+    width: 98%;
+    height: 2px;
+    margin: auto;
+    background-color: black;
+}
+
+.button:active {
+  background-color: goldenrod; /* Цвет при нажатии */
+
+}
+
+.img {
+    width: 20px;
+    height: 20px;
+}
