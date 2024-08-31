@@ -1,44 +1,66 @@
-// eslint-disable-next-line
-import React from "react"
-import { useEffect, useState } from "react"
-// eslint-disable-next-line
-import {getData} from '../api/api'
-
+import { useState } from "react";
 import './app.css'
+import Form from "../form/Form";
 
-import ModuleRouter from "../router/module"
 
 function App() {
+  const [todos, setTodos] = useState([]);
 
-    const [data, setData] = useState(null)
+  const putTodo = (value) => {
+    if (value) {
+      setTodos([...todos, {id: Date.now(), text: value, done:false}]);
+    } else {
+      alert('Put Text')
+    }
+  };
 
-    const [module, setModule] = useState('posts')
+  const toggleTodo = (id) => {
+    setTodos(todos.map( (todo) => {
+      if (todo.id !== id) return todo;
 
+      return {
+        ...todo,
+        done: !todo.done
+      }
+    }
+    ))
+  }
 
-    useEffect( () => {
-        const fetchData = async () => {
-            const info = await getData(module)
-            setData(info)
-        }
-        fetchData()
-    },[module])
+  const removeTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
+ 
+  const idChan = (id) => {
+    console.log(todos.filter( todo => todo.id !== id));
+  }
 
-    
-    
-
-    return (
-        <> 
-            <div className="button-block">
-                <button className="button" onClick={() => setModule('posts')}>Posts</button>
-                <button className="button" onClick={() => setModule('comments')}>Comments</button>
-                <button className="button" onClick={() => setModule('albums')}>Albums</button>
-                <button className="button" onClick={() => setModule('photos')}>Photos</button>
-            </div>
-
-            <div className="line"></div>
-            {data ? <ModuleRouter data={data} module={module} /> : <h1> Loading... </h1>}
-        </>
-    )
+  return (
+    <>
+      <div className="wrapper">
+        <div className="container">
+          <h1 className="title">TodoList</h1>
+          <Form putTodo={putTodo} />
+          <ul className="todos">
+            {
+              todos.map( (todo) => {
+                return (
+                  <li className='todo'key={todo.id} onClick={(e) => toggleTodo(todo.id)}>
+                    <div className={todo.done ? 'done' : 'cancel'}></div>
+                    <div className="div-todo">{todo.text}</div>
+                    <img src="./delete.png" alt="delete" className="delete" onClick={ (e) => {
+                      e.stopPropagation();
+                      removeTodo(todo.id)
+                      idChan(todo.id)
+                    }}/>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;

@@ -1,34 +1,60 @@
-.button-block {
-    width: 852px;
-    height: 50px;
-    margin: 38px auto;
+.container {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+}
+
+.title {
+  text-align: center;
+  color: #1bc4b5;
+  margin-bottom: 10px;
+}
+
+.todos {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+.todo {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  box-shadow: 2px 2px 10px 0 #1bc4b5;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
 }
 
-.button {
-    width: 168px;
+.done {
+    width: 50px;
     height: 50px;
-    color: white;
-    background-color: black;
-    border-radius: 224px;
-    cursor: pointer;
+    background-image: url('../../../public/done.svg');
 }
 
-
-.line {
-    width: 98%;
-    height: 2px;
-    margin: auto;
-    background-color: black;
+.cancel {
+  width: 50px;
+  height: 50px;
+  background-image: url('../../../public/cancel.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.button:active {
-  background-color: goldenrod; /* Цвет при нажатии */
-
+.delete {
+  width: 35px;
+  position: absolute;
+  right: 5px;
+  top: 20px;
+  
 }
 
-.img {
-    width: 20px;
-    height: 20px;
+.div-todo {
+  padding-left: 25px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 24px;
 }

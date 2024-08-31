@@ -1,0 +1,15 @@
+
+.input {
+    width: 100%;
+    outline: none;
+    border: 2px solid #6bffef;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    place-content: 2px;
+}
+
+.input::placeholder {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+}
