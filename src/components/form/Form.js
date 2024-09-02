@@ -13,11 +13,12 @@ const Form = (props) => {
     >
       <input
         type="text"
-        placeholder="Input text"
+        placeholder="Input..."
         className="input"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
+
     </form>
   );
 };

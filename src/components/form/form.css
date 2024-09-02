@@ -1,15 +1,27 @@
-
+.form {
+  width: 70vh;
+  display: flex;
+}
 .input {
-    width: 100%;
-    outline: none;
-    border: 2px solid #6bffef;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    place-content: 2px;
+  width: 70vh;
+  height: 2.5rem;
+  padding-left: 2.5rem;
+
+  border: 2px solid rgb(111, 49, 236);
+  border-radius: 0.5rem;
+
+  background-image: url("/public/search.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .input::placeholder {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
+  color: rgb(111, 49, 236);
+  font-size: medium;
+  font-family: "Geneva";
 }

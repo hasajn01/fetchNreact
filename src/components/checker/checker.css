@@ -1,0 +1,51 @@
+
+
+.checker {
+    width: 15vh;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    margin-right: 50%;
+    gap: 10px;
+}
+
+
+.all-todo {
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px dashed blue;
+    border-radius: 0.5rem;
+    color: black;
+
+    display: flex;
+    align-items: center;    
+}
+
+.done-todo {
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px dashed blue;
+    border-radius: 0.5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+
+.cancel-todo {
+     padding: 10px;
+    background-color: aliceblue;
+    border: 1px dashed blue;
+    border-radius: 0.5rem;
+    color: black;
+    display: flex;
+    align-items: center;    
+}
+
+
+.img-done {
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: cover;
+}
+
